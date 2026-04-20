@@ -5,39 +5,39 @@
 ### Problema
 > Qual problema financeiro seu agente resolve?
 
-[Sua descrição aqui]
+[Usuários têm dificuldade em entender conceitos financeiros básicos, simular cenários de investimento e tomar decisões informadas de forma simples e interativa.]
 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
 
-[Sua descrição aqui]
+[O agente atua como um assistente financeiro educacional baseado em IA generativa, capaz de responder perguntas, simular cenários financeiros simples (como juros e gastos), explicar produtos e manter contexto da conversa para oferecer uma experiência personalizada e guiada.]
 
 ### Público-Alvo
 > Quem vai usar esse agente?
 
-[Sua descrição aqui]
+[Pessoas que desejam aprender sobre finanças pessoais de forma simples, interativa e orientada por IA, incluindo iniciantes em educação financeira.]
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+[FinCoach AI]
 
 ### Personalidade
 > Como o agente se comporta? (ex: consultivo, direto, educativo)
 
-[Sua descrição aqui]
+[O agente se comporta como um mentor financeiro educacional: paciente, didático e sempre focado em explicar conceitos de forma simples e prática.]
 
 ### Tom de Comunicação
 > Formal, informal, técnico, acessível?
 
-[Sua descrição aqui]
+[Acessível e educativo, evitando jargões técnicos e priorizando clareza na explicação.]
 
 ### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
+- Saudação: ["Olá! Vamos entender suas finanças de forma simples hoje?"]
+- Confirmação: ["Entendi! Vou te ajudar a simular isso passo a passo."]
+- Erro/Limitação: ["Não tenho todos os dados necessários, mas posso te explicar como isso funciona na prática."]
 
 ---
 
@@ -47,22 +47,24 @@
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
-    B --> C[LLM]
-    C --> D[Base de Conhecimento]
-    D --> C
-    C --> E[Validação]
-    E --> F[Resposta]
+    A[Usuário] --> B[Interface de Conversação]
+    B --> C[IA Generativa (LLM)]
+    C --> D[Base de Conhecimento Financeiro]
+    C --> E[Módulo de Simulação Financeira]
+    E --> C
+    C --> F[Gerenciador de Contexto]
+    F --> C
+    C --> G[Resposta Personalizada]
 ```
 
 ### Componentes
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Simulador Financeiro | [Calcula juros, gastos e cenários simples] |
+| Context Manager | [Mantém histórico da conversa] |
+| IA Generativa | [Interpreta perguntas e gera respostas] |
+| Base Educacional | [Explicações de produtos e conceitos] |
 
 ---
 
@@ -70,12 +72,13 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [ ] [✔ Respostas baseadas em contexto e dados fornecidos]
+- [ ] [✔ Foco educacional (não recomendação financeira direta)]
+- [ ] [✔ Simulações com valores hipotéticos]
+- [ ] [✔ Simulações com valores hipotéticos]
+- [ ] [✔ Evita aconselhamento financeiro personalizado]
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+[O agente não realiza recomendações de investimento personalizadas, não acessa dados bancários reais e não substitui consultoria financeira profissional.]
