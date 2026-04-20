@@ -2,14 +2,14 @@
 
 ## Dados Utilizados
 
-Descreva se usou os arquivos da pasta `data`, por exemplo:
+A base de conhecimento do agente foi estruturada com dados simulados para representar um ambiente real de educação financeira e análise de comportamento do usuário.
 
 | Arquivo | Formato | Utilização no Agente |
 |---------|---------|---------------------|
-| `historico_atendimento.csv` | CSV | Contextualizar interações anteriores |
-| `perfil_investidor.json` | JSON | Personalizar recomendações |
-| `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
-| `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
+| `historico_atendimento.csv` | CSV | Mantém histórico de interações para contexto da conversa |
+| `perfil_investidor.json` | JSON | Define perfil financeiro do usuário (conservador, moderado, agressivo) |
+| `produtos_financeiros.json` | JSON | Base educacional com explicações de produtos financeiros |
+| `transacoes.csv` | CSV | Simula padrões de consumo e auxilia em análises de gastos |
 
 > [!TIP]
 > **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
@@ -20,7 +20,11 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-[Sua descrição aqui]
+[Os dados foram estruturados de forma simulada e educacional, com foco em:
+-Representar perfis financeiros fictícios de usuários
+-Simular histórico de transações para análise de comportamento
+-Criar uma base de produtos financeiros explicativos (não comerciais)
+-Permitir simulações de cenários financeiros simples (gastos e organização financeira)]
 
 ---
 
@@ -29,12 +33,17 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+[Os arquivos JSON e CSV são carregados no início da execução da aplicação e convertidos em estruturas de dados Python (dicionários e DataFrames), permitindo consultas rápidas durante a interação com o usuário.t]
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+[A base de conhecimento é utilizada de forma dinâmica e contextual, sendo incorporada ao fluxo da IA da seguinte forma:
+-O perfil do usuário personaliza o tom e o tipo de explicação
+-O histórico de transações é usado para análises simples de comportamento financeiro
+-Os produtos financeiros servem como base educacional para explicações
+-O histórico de atendimento mantém contexto da conversa para continuidade
+Os dados são combinados com o prompt da IA generativa para gerar respostas mais contextualizadas e personalizadas.]
 
 ---
 
@@ -43,13 +52,17 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 > Mostre um exemplo de como os dados são formatados para o agente.
 
 ```
-Dados do Cliente:
-- Nome: João Silva
+👤 Dados do Usuário:
+- Nome: Maria Luiza
 - Perfil: Moderado
-- Saldo disponível: R$ 5.000
+- Objetivo: Organização financeira mensal
 
-Últimas transações:
+💰 Resumo de Transações:
 - 01/11: Supermercado - R$ 450
 - 03/11: Streaming - R$ 55
+- 05/11: Restaurante - R$ 120
+
+📊 Análise do Agente:
+O usuário apresenta padrão de gastos recorrentes com lazer e alimentação fora de casa, podendo otimizar seu orçamento mensal.
 ...
 ```
