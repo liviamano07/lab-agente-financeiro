@@ -51,9 +51,7 @@ flowchart TD
     B --> C[IA Generativa (LLM)]
     C --> D[Base de Conhecimento Financeiro]
     C --> E[Módulo de Simulação Financeira]
-    E --> C
     C --> F[Gerenciador de Contexto]
-    F --> C
     C --> G[Resposta Personalizada]
 ```
 
