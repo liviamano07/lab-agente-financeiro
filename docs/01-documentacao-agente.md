@@ -47,12 +47,12 @@
 
 ```mermaid
 flowchart TD
-    A[Usuário] --> B[Interface de Conversação]
-    B --> C[IA Generativa (LLM)]
+    A[Usuário] -->|Mensagem| B[Interface de Conversão]
+    B --> C[IA Generativa LLM]
     C --> D[Base de Conhecimento Financeiro]
+    D --> C
     C --> E[Módulo de Simulação Financeira]
-    C --> F[Gerenciador de Contexto]
-    C --> G[Resposta Personalizada]
+    E --> F[Gerenciador de Contexto]
 ```
 
 ### Componentes
