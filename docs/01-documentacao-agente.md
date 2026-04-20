@@ -46,12 +46,14 @@
 ### Diagrama
 
 ```mermaid
-A[Usuário] --> B[Interface de Conversação]
-    B --> C[IA Generativa (LLM)]
-    C --> D[Base de Conhecimento Financeiro]
-    C --> E[Módulo de Simulação Financeira]
-    C --> F[Gerenciador de Contexto]
-    C --> G[Resposta Personalizada]
+flowchart TD
+    A[Cliente] -->|Mensagem| B[Interface]
+    B --> C[LLM]
+    C --> D[Base de Conhecimento]
+    D --> C
+    C --> E[Validação]
+    E --> F[Resposta]
+
 ```
 
 ### Componentes
