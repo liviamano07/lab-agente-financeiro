@@ -3,40 +3,50 @@
     "nome": "Tesouro Selic",
     "categoria": "renda_fixa",
     "risco": "baixo",
-    "rentabilidade": "100% da Selic",
+    "rentabilidade_base": "100% da Selic",
+    "liquidez": "diária",
     "aporte_minimo": 30.00,
-    "indicado_para": "Reserva de emergência e iniciantes"
+    "indicacao_educacional": "Ideal para reserva de emergência e iniciantes em investimentos",
+    "nivel_complexidade": "baixo"
   },
   {
     "nome": "CDB Liquidez Diária",
     "categoria": "renda_fixa",
     "risco": "baixo",
-    "rentabilidade": "102% do CDI",
+    "rentabilidade_base": "102% do CDI",
+    "liquidez": "diária",
     "aporte_minimo": 100.00,
-    "indicado_para": "Quem busca segurança com rendimento diário"
+    "indicacao_educacional": "Indicado para quem busca segurança com possibilidade de resgate a qualquer momento",
+    "nivel_complexidade": "baixo"
   },
   {
     "nome": "LCI/LCA",
     "categoria": "renda_fixa",
     "risco": "baixo",
-    "rentabilidade": "95% do CDI",
+    "rentabilidade_base": "95% do CDI",
+    "liquidez": "90 dias ou mais",
     "aporte_minimo": 1000.00,
-    "indicado_para": "Quem pode esperar 90 dias (isento de IR)"
+    "indicacao_educacional": "Indicado para objetivos de médio prazo com benefício de isenção de imposto de renda",
+    "nivel_complexidade": "medio"
   },
   {
     "nome": "Fundo Multimercado",
-    "categoria": "fundo",
+    "categoria": "fundos",
     "risco": "medio",
-    "rentabilidade": "CDI + 2%",
+    "rentabilidade_base": "CDI + 2%",
+    "liquidez": "variável",
     "aporte_minimo": 500.00,
-    "indicado_para": "Perfil moderado que busca diversificação"
+    "indicacao_educacional": "Indicado para investidores com perfil moderado que desejam diversificação",
+    "nivel_complexidade": "medio"
   },
   {
     "nome": "Fundo de Ações",
-    "categoria": "fundo",
+    "categoria": "fundos",
     "risco": "alto",
-    "rentabilidade": "Variável",
+    "rentabilidade_base": "variável",
+    "liquidez": "variável",
     "aporte_minimo": 100.00,
-    "indicado_para": "Perfil arrojado com foco no longo prazo"
+    "indicacao_educacional": "Indicado para longo prazo e perfis com maior tolerância ao risco",
+    "nivel_complexidade": "alto"
   }
 ]
