@@ -118,7 +118,6 @@ Se você economizar R$ 200 por mês, ao final de 12 meses terá R$ 2.400.
 ## 🎯 Arquitetura do Sistema
 
 ```mermaid
-
 flowchart TD
     A[Cliente] -->|Mensagem| B[Interface]
     B --> C[LLM]
@@ -126,6 +125,8 @@ flowchart TD
     D --> C
     C --> E[Validação]
     E --> F[Resposta]
+
+```
 
 ## 🧪 Exemplo de Dados
 📄 Transações
